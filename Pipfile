@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+autopep8 = "*"
+django-debug-toolbar = "*"
+
+[packages]
+django = {extras = ["bcrypt"],version = "*"}
+python-decouple = "*"
+django-environ = "*"
+django-allauth = "*"
+django-crispy-forms = "*"
+
+[requires]
+python_version = "3.6"

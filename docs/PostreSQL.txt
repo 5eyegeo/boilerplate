@@ -1,0 +1,68 @@
+websites link
+http://postgresguide.com/setup/install.html
+
+For Linux
+For APT systems (Ubuntu, Debian, Mint, Etc)
+sudo apt-get install postgresql
+
+For entering in the postgresql
+sudo -u postgres psql
+
+
+PostgreSQL List Users
+To list all user accounts in the PostgreSQL database server, you use the \du psql  command as follows:
+postgres=# \du
+
+If you want to show more information, you can use the \du+ command:
+postgres=# \du+
+
+PostgreSQL - How to grant access to users?
+websites link
+https://tableplus.io/blog/2018/04/postgresql-how-to-grant-access-to-users.html
+
+Users
+
+Adding a User
+Once you've initially installed Postgres you should be able to connect almost immediately with psql -h localhost. This will put you inside your database to begin working. Of course the next step before doing anything else is to create a user account for yourself.
+
+craig=# CREATE USER craig WITH PASSWORD 'Password';
+CREATE ROLE
+New user craig is created with password Password.
+
+Next step is to create a database and grant access to the user craig
+
+craig=# CREATE DATABASE pgguide;
+CREATE DATABASE
+Now new database pgguide is created. Now we will grant access to craig.
+
+craig=# GRANT ALL PRIVILEGES ON DATABASE pgguide to craig;
+GRANT
+Now craig has all privileges on database pgguide. There are several different kinds of privilege: SELECT, INSERT, UPDATE, DELETE, RULE, REFERENCES, TRIGGER, CREATE, TEMPORARY, EXECUTE, and USAGE.
+
+craig=# GRANT SELECT ON DATABASE pgguide to craig;
+GRANT
+GRANT SELECT allows craig ONLY to do select query on database pgguide
+
+Video link for normal operation in postgresql
+https://www.youtube.com/watch?v=jNIdcrQsfYo&t=7s
+
+Installing postgis
+link https://docs.djangoproject.com/en/2.2/ref/contrib/gis/install/postgis/
+
+To list the database use below command
+\l
+
+To connect the database use below command
+\c database name
+
+To display list of table use below command
+\dt
+or
+SELECT * FROM pg_catalog.pg_tables;
+
+
+For deleting table follow below link for details
+http://www.postgresqltutorial.com/postgresql-drop-table/
+
+DROP TABLE [IF EXISTS] table_name [CASCADE | RESTRICT];
+buildings_building
