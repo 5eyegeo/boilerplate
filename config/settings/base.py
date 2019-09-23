@@ -31,6 +31,7 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     # "rest_framework",
+    "compressor",
 ]
 
 LOCAL_APPS = [
@@ -234,3 +235,10 @@ ACCOUNT_SIGNUP_FORM_CLASS = 'projects.users.forms.TermsAgreeForm'
 # ACCOUNT_ADAPTER = "my_awesome_project.users.adapters.AccountAdapter"
 # # https://django-allauth.readthedocs.io/en/latest/configuration.html
 # SOCIALACCOUNT_ADAPTER = "my_awesome_project.users.adapters.SocialAccountAdapter"
+
+# This setting is for django compressor
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)

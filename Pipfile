@@ -14,6 +14,7 @@ python-decouple = "*"
 django-environ = "*"
 django-allauth = "*"
 django-crispy-forms = "*"
+django-compressor = "*"
 
 [requires]
 python_version = "3.6"
