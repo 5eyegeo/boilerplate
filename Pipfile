@@ -16,6 +16,7 @@ django-environ = "*"
 django-allauth = "*"
 django-crispy-forms = "*"
 django-compressor = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.6"
