@@ -35,11 +35,6 @@ class UserProfile(models.Model):
     last_name = models.CharField(_("Last name"), max_length=50)
     dob = models.DateField(_("D.O.B"), auto_now=False, auto_now_add=False, blank=False, null=False)
     profile_image = models.ImageField(_("Profile picture"), upload_to='user/profile/', blank=True)
-    webiste_link = models.URLField(_("Websites"), max_length=200, null=True, blank=True)
-    facebook = models.URLField(_("Facebook Profile"), max_length=200, null=True, blank=True)
-    twitter = models.URLField(_("Twitter Profile"), max_length=200, null=True, blank=True)
-    instagram = models.URLField(_("Instagram Profile"), max_length=200, null=True, blank=True)
-    linkedin = models.URLField(_("LinkedIn Profile"), max_length=200, null=True, blank=True)
     about = models.TextField(_("About"))
 
     class Meta:
