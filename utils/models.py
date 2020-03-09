@@ -38,7 +38,7 @@ class TimeStampWithCreator(TimeStamp):
         editable=False,
         blank=True,
         null=True,
-        related_name='created_by',
+        related_name='created_%(class)ss',
         on_delete=models.SET_NULL)
     updated_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -46,7 +46,7 @@ class TimeStampWithCreator(TimeStamp):
         editable=True,
         blank=True,
         null=True,
-        related_name='updated_by',
+        related_name='updated_%(class)ss',
         on_delete=models.SET_NULL)
 
     def save(self, *args, **kwargs):
