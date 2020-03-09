@@ -1,6 +1,7 @@
 Create .env file and add following setting
 
-```DEBUG=on
+```
+DEBUG=on
 SECRET_KEY=your-secret-key
 DATABASE_URL=psql://urser:un-githubbedpassword@127.0.0.1:8458/database
 SQLITE_URL=sqlite:///db.sqlite

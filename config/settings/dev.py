@@ -28,15 +28,20 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # EMAIL_HOST = "localhost"
 # # https://docs.djangoproject.com/en/dev/ref/settings/#email-port
 # EMAIL_PORT = 1025
-
+LIVE_RELOAD = False
 # django-debug-toolbar
 # ------------------------------------------------------------------------------
 # https://django-debug-toolbar.readthedocs.io/en/latest/installation.html#prerequisites
 INSTALLED_APPS += [
     "debug_toolbar",
     "django_extensions",
-    "livereload",  # https://github.com/tjwalch/django-livereload-server
 ]  # noqa F405
+
+if LIVE_RELOAD:
+    INSTALLED_APPS += [
+        "livereload",  # https://github.com/tjwalch/django-livereload-server
+    ]
+
 # https://django-debug-toolbar.readthedocs.io/en/latest/installation.html#middleware
 MIDDLEWARE += [
     "debug_toolbar.middleware.DebugToolbarMiddleware",

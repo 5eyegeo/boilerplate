@@ -1,4 +1,7 @@
+argon2-cffi==19.2.0
+autopep8==1.5
 beautifulsoup4==4.8.1
+cffi==1.14.0
 Django==2.2.7
 django-appconf==1.0.3
 django-compressor==2.3
@@ -6,9 +9,18 @@ django-crispy-forms==1.8.1
 django-debug-toolbar==2.1
 django-environ==0.4.5
 django-extensions==2.2.5
+django-filter==2.2.0
 django-livereload-server==0.3.2
+djangorestframework==3.11.0
+entrypoints==0.3
+flake8==3.7.9
+Markdown==3.2.1
+mccabe==0.6.1
 Pillow==6.2.1
 psycopg2-binary==2.8.4
+pycodestyle==2.5.0
+pycparser==2.19
+pyflakes==2.1.1
 pytz==2019.3
 rcssmin==1.0.6
 rjsmin==1.1.0
