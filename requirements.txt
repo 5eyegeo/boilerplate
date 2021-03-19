@@ -11,7 +11,7 @@ django-environ==0.4.5
 django-extensions==2.2.5
 django-filter==2.2.0
 django-livereload-server==0.3.2
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 entrypoints==0.3
 flake8==3.7.9
 Markdown==3.2.1
